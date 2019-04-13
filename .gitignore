@@ -1,0 +1,9 @@
+#pdf files 
+main.pdf
+Rezeptbuch.pdf
+
+#Apple files
+*.DS_Store
+
+#tex files
+*.aux

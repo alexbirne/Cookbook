@@ -1,0 +1,47 @@
+ \documentclass[a5paper]{scrartcl}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{XITS}
+  \setsansfont{Tex Gyre Heros}
+
+\setkomafont{caption}{\small}
+
+\usepackage{scrlayer-scrpage}
+  \pagestyle{scrheadings}
+
+\usepackage[autostyle=true,german=quotes]{csquotes}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{german}
+\setotherlanguages{english}
+
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+    pdfauthor = {Alex Birnkraut, alex.birnkraut@tu-dortmund.de},
+    pdftitle = {Rezeptbuch},
+    pdfsubject = {kochen},
+    pdfkeywords = {Küche, Rzepte, Essen},
+    pdfcreator = {LaTeX with hyperref package},
+    pdfproducer = {lualatex}
+    }
+
+\usepackage{mathtools}
+\usepackage[bold-style=ISO, math-style=ISO]{unicode-math}
+\setmathfont[Scale=MatchUppercase]{XITS Math}
+
+\usepackage[locale=DE,input-ignore={.},separate-uncertainty=true,range-phrase=--]{siunitx}
+\sisetup{}
+
+\usepackage{xfrac}
+\usepackage{nicefrac}
+\usepackage{enumerate}
+\usepackage{multicol}
+
+\begin{document}
+
+  \input{inputs.tex}
+
+\end{document}
+
