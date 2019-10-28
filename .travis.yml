@@ -7,3 +7,9 @@ script:
   # Compiling the tex file
   - docker run -v $TRAVIS_BUILD_DIR/:/mnt/TexDir alexbirne/texlive2019 /bin/bash -c "cd /mnt/TexDir; make"
   - ls $TRAVIS_BUILD_DIR
+notifications:
+  email:
+    recipients:
+      - alex.birnkraut@gmail.com
+    on_success: change 
+    on_failure: always
