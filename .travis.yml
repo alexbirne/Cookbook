@@ -1,0 +1,9 @@
+sudo: required
+language: generic
+services: docker
+
+script:
+  - docker pull alexbirne/texlive2019:latest
+  # Compiling the tex file
+  - docker run -v $TRAVIS_BUILD_DIR/:/mnt/TexDir alexbirne/texlive2019 /bin/bash -c "cd /mnt/TexDir; make"
+  - ls $TRAVIS_BUILD_DIR
