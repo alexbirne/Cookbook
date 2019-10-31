@@ -7,6 +7,7 @@ script:
   # Compiling the tex file
   - docker run -v $TRAVIS_BUILD_DIR/:/mnt/TexDir alexbirne/texlive2019 /bin/bash -c "cd /mnt/TexDir; make"
   - ls $TRAVIS_BUILD_DIR
+  - docker run -e UPLOAD_URL=$UPLOAD_URL -e UPLOAD_FILE=$UPLOAD_FILE -e UPLOAD_PASSWORD=$UPLOAD_PASSWORD -v $TRAVIS_BUILD_DIR:/mnt/UploadDir alexbirne/uploadnextcloud
 notifications:
   email:
     recipients:
