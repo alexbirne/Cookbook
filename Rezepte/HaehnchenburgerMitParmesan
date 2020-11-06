@@ -1,0 +1,45 @@
+\section*{Hähnchenburger mit Parmesan}
+\ihead{}\chead{Personen:2}\ohead{}
+\ifoot{Vorbereitungszeit:}\cfoot{}\ofoot{Kochzeit:\SIrange{35}{45}{min}}
+{\Large Zutaten}
+\begin{multicols}{2}
+\begin{itemize}
+    \item \SI{34}{ml} Ketchup
+    \item \num{2} Briochebrötchen
+    \item \num{1} Tomate
+    \item \SI{400}{g} Kartoffeln
+    \item \SI{250}{g} Hähnchenbrustfilet
+    \item \SI{20}{g} Parmesan
+    \item \num{1} Salatherz
+    \item \SI{12}{ml} Rotweinessig
+    \item \SI{17}{ml} Mayonnaise
+    \item \num{1} Karotte
+    \item Salz, Pfeffer, Olivenöl
+\end{itemize}
+\end{multicols}
+\noindent
+{\Large Zubereitung}\\
+\\
+\textit{Vorbereitung:} Ofen auf \SI{200}{\celsius} Umluft vorheizen.\\
+Burger zubereiten: Hähnchenbrustfile mit einem Messer waagerecht aufschneiden (aber nicht ganz durch) und aufklappen. 
+Fleisch in eine große Schüssel geben, mit Salz, Pfeffer und weiteren Gewürzen vermischen.
+
+Kartoffelspalten backen: Kartoffeln in Spalten schneiden und auf einem Backblech verteilen. 
+Mit einem EL Öl, Slaz und Pfeffer vermischen und \SI{30}{min} im Ofen rösten.
+
+Hähnchen garen: In einer großen Pfanne einen EL Öl erhitzen und die Hähnchenbrustfilets von jeder Seite \SIrange{3}{4}{min} anbraten.
+In den letzten \SIrange{8}{10}{min} Hähnchenbrustfilets neben die Kartoffeln legen, mit dem Parmesan bestreuen und mitbacken.
+
+Gemüse schneiden: \num{4} Salatblätter beiseite legen. 
+Salat in Streifen schneiden. 
+Karotte grob raspeln. 
+Salat und Karotte zusammen mit Mayonnaise vermischen und mit Salz, Pfeffer und einem TL Essig abschmecken.
+
+Burger vollenden: Ketchup würzen. 
+Burgerbrötchen halbieren und auf einem zweiten Backblech \SIrange{2}{3}{min} aufbacken. 
+Tomaten in Scheiben schneiden.
+
+Burger anrichten: Etwas Kräuterketchup auf die Brötchenhälften streichen. 
+Die Burgerunterseite mit je \num{2} Salatblättern und Tomatenscheiben belegen. 
+Die Hähnchenbrustfilets zwischen die Brötchenhälften legen. 
+Mit Kartoffeln und Salat anrichten. 
