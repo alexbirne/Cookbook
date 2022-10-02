@@ -22,13 +22,17 @@ jobs:
   Upload2Nextcloud:
     needs: BuildLatex
     runs-on: ubuntu-latest
+    container:
+      image: alexbirne/uploadnextcloud:latest
     steps:
       - name: Download artifact
         uses: actions/download-artifact@master
         with: 
           name: PDF Document
           path: main.pdf
-      #- name: File Upload
-      #  run: ./upload_nextcloud.sh
+      - name: Understand environment
+        run: ls -la
+      - name: File Upload
+        run: ./upload_nextcloud.sh
   
   
