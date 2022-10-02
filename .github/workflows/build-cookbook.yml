@@ -30,6 +30,8 @@ jobs:
           path: main.pdf
       - name: Understand environment
         run: ls -la
+      - name: Understand environment 2
+        run: pwd
       - name: File Upload
         run: ./upload_nextcloud.sh
   
