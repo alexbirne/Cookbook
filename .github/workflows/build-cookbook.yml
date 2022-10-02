@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+      - name: Understand environment
+        run: ls -la
+      - name: Understand environment 2
+        run: pwd
       - name: Build latex
-        run: cd /mnt/TexDir; make
+        run: cd Cookbook; make
   
