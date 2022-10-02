@@ -5,9 +5,13 @@ on:
     branches:
       - master
 jobs:
-  BuildCookbook:
+  container-test-job:
     runs-on: ubuntu-latest
-    container: alexbirne/texlive2019:latest
+    container:
+      image: alexbirne/texlive2019:latest
     steps:
-      - docker run -v $GITHUB_ACTION_PATH/:/mnt/TexDir alexbirne/texlive2019 /bin/bash -c "cd /mnt/TexDir; make"
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Build latex
+        run: cd /mnt/TexDir; make
   
