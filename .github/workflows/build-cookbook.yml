@@ -5,7 +5,7 @@ on:
     branches:
       - master
 jobs:
-  container-test-job:
+  Build Lates:
     runs-on: ubuntu-latest
     container:
       image: alexbirne/texlive2019:latest
@@ -19,4 +19,17 @@ jobs:
         with:
           name: PDF Document
           path: main.pdf
+  Upload to Nextcloud:
+    runs-on: ubuntu-latest
+    container:
+      image: alexbirne/uploadnextcloud:latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@master
+        with: 
+          name: PDF Document
+          path: main.pdf
+      - name: File Upload
+        run: ./upload_nextcloud.sh
+  
   
