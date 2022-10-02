@@ -8,7 +8,7 @@ jobs:
   BuildLatex:
     runs-on: ubuntu-latest
     container:
-      image: alexbirne/texlive2022:latest
+      image: alexbirne/texlive2019:latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
