@@ -30,12 +30,14 @@ jobs:
           path: main.pdf
       - name: Understand environment
         run: ls -la
-      - name: Understand environment 2
-        run: pwd
-      - name: Understand environment 3
-        run: ls -la ..
-      - name: Understand environment 3
+      - name: Understand environment 1
         run: ls -la /
+      - name: Understand environment 2
+        run: ls -la /home/
+      - name: Understand environment 3
+        run: ls -la /home/runner/
+      - name: Understand environment 4
+        run: ls -la /home/runner/work/
       - name: File Upload
         run: ./upload_nextcloud.sh
   
