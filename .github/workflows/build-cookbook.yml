@@ -20,6 +20,7 @@ jobs:
           name: PDF Document
           path: main.pdf
   Upload2Nextcloud:
+    needs: BuildLatex
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
