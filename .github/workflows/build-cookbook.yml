@@ -7,8 +7,7 @@ on:
 jobs:
   BuildCookbook:
     runs-on: ubuntu-latest
+    container: alexbirne/texlive2019:latest
     steps:
-      - docker pull alexbirne/texlive2019:latest
       - docker run -v $GITHUB_ACTION_PATH/:/mnt/TexDir alexbirne/texlive2019 /bin/bash -c "cd /mnt/TexDir; make"
-      - docker run -e UPLOAD_URL=$UPLOAD_URL -e UPLOAD_FILE=$UPLOAD_FILE -e UPLOAD_PASSWORD=$UPLOAD_PASSWORD -v $GITHUB_ACTION_PATH:/mnt/UploadDir alexbirne/uploadnextcloud
   
