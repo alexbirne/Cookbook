@@ -30,6 +30,8 @@ jobs:
         with: 
           name: PDF Document
           path: main.pdf
+      - name: Env 
+        run: ls -la /mnt
       - name: File Upload
         run: /bin/bash /upload_nextcloud.sh
   
