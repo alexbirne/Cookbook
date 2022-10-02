@@ -22,8 +22,6 @@ jobs:
   Upload2Nextcloud:
     needs: BuildLatex
     runs-on: ubuntu-latest
-    container:
-      image: alexbirne/uploadnextcloud:latest
     steps:
       - name: Download artifact
         uses: actions/download-artifact@master
