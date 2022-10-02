@@ -30,8 +30,10 @@ jobs:
         with: 
           name: PDF Document
           path: main.pdf
+      - name: Move artifact
+        run: mv main.pdf /mnt/UploadDir/main.pdf
       - name: Env 
-        run: ls -la /mnt
+        run: ls -la /mnt/UploadDir
       - name: File Upload
         run: /bin/bash /upload_nextcloud.sh
   
