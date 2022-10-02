@@ -5,7 +5,7 @@ on:
     branches:
       - master
 jobs:
-  Build Lates:
+  BuildLatex:
     runs-on: ubuntu-latest
     container:
       image: alexbirne/texlive2019:latest
@@ -19,7 +19,7 @@ jobs:
         with:
           name: PDF Document
           path: main.pdf
-  Upload to Nextcloud:
+  Upload2Nextcloud:
     runs-on: ubuntu-latest
     container:
       image: alexbirne/uploadnextcloud:latest
