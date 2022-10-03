@@ -29,8 +29,15 @@ jobs:
           name: PDF Document
           path: main.pdf
       - name: Print Envs
+        env: 
+          UPLOAD_URL:  ${{ secrets.UPLOAD_URL }}
         run: echo $UPLOAD_URL
       - name: Upload to Nextcloud
+        env:
+          UPLOAD_URL:  ${{ secrets.UPLOAD_URL }}
+          UPLOAD_FILE: main.pdf
+          UPLOAD_USER: ${{ secrets.UPLOAD_USER }}
+          UPLOAD_PASSWORD: ${{ secrets.UPLOAD_PASSWORD }}
         run: curl -u $UPLOAD_USER:$UPLOAD_PASSWORD -T "$UPLOAD_FILE" "$UPLOAD_URL/remote.php/dav/files/$UPLOAD_USER/Cookbook/"
   
   
