@@ -28,6 +28,8 @@ jobs:
         with: 
           name: PDF Document
           path: main.pdf
+      - name: Check artifact
+        run: ls -la
       - name: Rename Cookbook file
         run: mv main.pdf Rezeptbuch.pdf
       - name: Upload to Nextcloud
