@@ -22,19 +22,13 @@ jobs:
   Upload2Nextcloud:
     needs: BuildLatex
     runs-on: ubuntu-latest
-    container:
-      image: alexbirne/uploadnextcloud:latest
     steps:
       - name: Download artifact
         uses: actions/download-artifact@master
         with: 
           name: PDF Document
           path: main.pdf
-      - name: Move artifact
-        run: mv main.pdf /mnt/UploadDir/main.pdf
-      - name: Env 
-        run: printenv 
-      - name: File Upload
-        run: /bin/bash /upload_nextcloud.sh
+      - name: Upload to Nextcloud
+        run: curl -u $UPLOAD_USER:$UPLOAD_PASSWORD -T "$UPLOAD_FILE" "$UPLOAD_URL/remote.php/dav/files/$UPLOAD_USER/Cookbook/"
   
   
