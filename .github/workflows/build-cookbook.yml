@@ -28,6 +28,8 @@ jobs:
         with: 
           name: PDF Document
           path: main.pdf
+      - name: Print Envs
+        run: echo $UPLOAD_URL
       - name: Upload to Nextcloud
         run: curl -u $UPLOAD_USER:$UPLOAD_PASSWORD -T "$UPLOAD_FILE" "$UPLOAD_URL/remote.php/dav/files/$UPLOAD_USER/Cookbook/"
   
