@@ -31,8 +31,11 @@
 \usepackage[bold-style=ISO, math-style=ISO]{unicode-math}
 \setmathfont[Scale=MatchUppercase]{XITS Math}
 
-\usepackage[locale=DE,input-ignore={.},separate-uncertainty=true,range-phrase=--,range-units=single]{siunitx}
-\sisetup{quotient-mode=fraction, parse-numbers = false}
+\usepackage[locale=DE,range-phrase=--,range-units=single]{siunitx}
+\sisetup{quotient-mode=fraction, parse-numbers = false, group-separator = {.}, input-decimal-markers={,}, output-decimal-marker = {,}}
+
+% \usepackage[locale=DE,input-ignore={.},separate-uncertainty=true,range-phrase=--,range-units=single]{siunitx}
+% \sisetup{quotient-mode=fraction, parse-numbers = false, output-decimal-marker = ,}
 
 \usepackage{xfrac}
 \usepackage{nicefrac}
