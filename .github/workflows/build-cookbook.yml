@@ -1,4 +1,3 @@
-```yaml
 name: Build Cookbook
 run-name: Building Cookbook to Nextcloud
 
@@ -52,4 +51,3 @@ jobs:
           curl -u "$UPLOAD_USER:$UPLOAD_PASSWORD" \
             -T "$UPLOAD_FILE" \
             "$UPLOAD_URL/remote.php/dav/files/$UPLOAD_USER/Cookbook/"
-```
