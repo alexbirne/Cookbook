@@ -1,42 +1,55 @@
+```yaml
 name: Build Cookbook
 run-name: Building Cookbook to Nextcloud
-on: 
+
+on:
   push:
     branches:
       - master
+
 jobs:
   BuildLatex:
     runs-on: ubuntu-latest
     container:
       image: alexbirne/texlive2022:latest
+
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
+
       - name: Build latex
         run: make
+
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Cookbook
           path: main.pdf
+
   Upload2Nextcloud:
     needs: BuildLatex
     runs-on: ubuntu-latest
+
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
-        with: 
+        uses: actions/download-artifact@v4
+        with:
           name: Cookbook
+
       - name: Check folder
         run: ls -la; ls -R
+
       - name: Rename Cookbook file
         run: mv main.pdf Rezeptbuch.pdf
+
       - name: Upload to Nextcloud
         env:
-          UPLOAD_URL:  ${{ secrets.UPLOAD_URL }}
+          UPLOAD_URL: ${{ secrets.UPLOAD_URL }}
           UPLOAD_FILE: Rezeptbuch.pdf
           UPLOAD_USER: ${{ secrets.UPLOAD_USER }}
           UPLOAD_PASSWORD: ${{ secrets.UPLOAD_PASSWORD }}
-        run: curl -u $UPLOAD_USER:$UPLOAD_PASSWORD -T "$UPLOAD_FILE" "$UPLOAD_URL/remote.php/dav/files/$UPLOAD_USER/Cookbook/"
-  
-  
+        run: |
+          curl -u "$UPLOAD_USER:$UPLOAD_PASSWORD" \
+            -T "$UPLOAD_FILE" \
+            "$UPLOAD_URL/remote.php/dav/files/$UPLOAD_USER/Cookbook/"
+```
