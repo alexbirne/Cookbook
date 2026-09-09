@@ -10,7 +10,7 @@ jobs:
   BuildLatex:
     runs-on: ubuntu-latest
     container:
-      image: alexbirne/texlive2022:latest
+      image: alexbirne/texlive:2022
 
     steps:
       - name: Check out repository code
